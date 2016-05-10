@@ -33,7 +33,7 @@ describe('fann_arrs', function () {
   })
 
   it('get all training algoritums', function () {
-    var expected = [ 'incremental', 'batch', 'rprop', 'quickprop' ]
+    var expected = [ 'incremental', 'batch', 'rprop', 'quickprop','sarprop' ]
     assert.deepEqual(fann.get_all_training_algorithms(), expected)
   })
 

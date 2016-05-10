@@ -15,7 +15,7 @@
   "license"         : { "type"  : "WTFPL"
                       , "url"   : "http://www.wtfpl.net/txt/copying/" },
 
-  "dependencies"    : { "nan"   : "~1.8" },
+  "dependencies"    : { "nan"   : "^2.3.3" },
 
   "devDependencies" : { "mocha" : "2" },
 
