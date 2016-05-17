@@ -5,7 +5,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "node-fann.h"
-#include "../node_modules/nan/nan.h"
+#include <nan.h>
 
 NAN_GETTER(NNet::GetTrainingAlgorithm)
 {
