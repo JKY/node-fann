@@ -12,23 +12,43 @@ sudo: true
 before_install:
   - sudo apt-get update -q
   - sudo apt-get install -y libfann-dev
-env:
-  - CXX=g++-5
-addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-    packages:
-    - gcc-5
-    - g++-5
+
 matrix:
-  exclude:
-    - node_js: 0.10
+  include:
+    - node_js: 'iojs'
       env: CXX=g++-5
-    - node_js: 0.12
+      addons:
+        apt:
+          sources:
+          - ubuntu-toolchain-r-test
+          packages:
+          - gcc-5
+          - g++-5
+    - node_js: '6.0.0'
       env: CXX=g++-5
-    - node_js: iojs-1
+      addons:
+        apt:
+          sources:
+          - ubuntu-toolchain-r-test
+          packages:
+          - gcc-5
+          - g++-5
+    - node_js: '6.1.0'
       env: CXX=g++-5
-    - node_js: iojs-2
+      addons:
+        apt:
+          sources:
+          - ubuntu-toolchain-r-test
+          packages:
+          - gcc-5
+          - g++-5
+    - node_js: '6.2.0'
       env: CXX=g++-5
+      addons:
+        apt:
+          sources:
+          - ubuntu-toolchain-r-test
+          packages:
+          - gcc-5
+          - g++-5
 script: npm install . && npm test
