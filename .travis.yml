@@ -4,10 +4,6 @@ node_js:
   - '0.12'
   - 'iojs-1'
   - 'iojs-2'
-  - 'iojs'
-  - '6.0.0'
-  - '6.1.0'
-  - '6.2.0'
 sudo: true
 before_install:
   - sudo apt-get update -q
