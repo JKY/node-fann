@@ -5,4 +5,11 @@ sudo: true
 before_install:
   - sudo apt-get update -q
   - sudo apt-get install -y libfann-dev
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-5
+    - g++-5
 script: npm install . && npm test
