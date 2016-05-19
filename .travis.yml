@@ -21,4 +21,14 @@ addons:
     packages:
     - gcc-5
     - g++-5
+matrix:
+  exclude:
+    - node_js: 0.10
+      env: CXX=g++-5
+    - node_js: 0.12
+      env: CXX=g++-5
+    - node_js: iojs-1
+      env: CXX=g++-5
+    - node_js: iojs-2
+      env: CXX=g++-5
 script: npm install . && npm test
